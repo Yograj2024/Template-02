@@ -1285,12 +1285,6 @@
         font-size: 8vw;
         text-align: center;
     }
-    .groupTravel .eg-row2 .eg-card{
-        height: auto;
-        width: 42vw;
-        margin:60px auto 0;
-        padding: 25px;
-    }
     .groupTravel .eg-card a{
         display: flex;
         flex-wrap:wrap;
