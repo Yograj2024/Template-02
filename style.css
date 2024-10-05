@@ -1,0 +1,1369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: #333333;
+    color: white;
+}
+:root{
+    --hFont:"Lato",Sans-serif;
+    --pFont:'Open Sans', sans-serif;
+}
+.header{
+    background-color: #333333;
+    text-transform: capitalize;
+}
+.navBar{
+    max-width: 1170px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 0 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 33px;
+    width: 65px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.eg-list{
+    display: flex;
+    list-style: none;
+    font:1rem var(--pFont);
+}
+.eg-list .eg-listitem{
+    padding: 0 2px 7px;
+    margin: 0 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    transition: 0.3s ease;
+
+    &:hover{
+        color: #f58d54;
+        border-color: #F58D54;
+    }
+}
+.eg-list .active{
+    color: #F58D54;
+    border-color: #F58D54;
+}
+
+.sideBarHide{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform:translateX(-100%);
+    width:40vw;
+    z-index: 2;
+    opacity: 0.9;
+    background: black;
+    transition: transform 0.6s ease-out;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 60px;
+}
+.show{
+    transform: translateX(0);
+}
+#clsoeIcon{
+    margin: 0 2vw 0 auto;
+    height: 7vw;
+    aspect-ratio: 1;
+}
+#list{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+    list-style: none;
+}
+.sideBarHide .eg-anker{
+    font: 4vw "Montserrat", sans-serif;
+    text-decoration: none;
+    color: white;
+
+    &:hover{
+        border: 2px solid yellow;
+        border-radius: 10px;
+        padding: 4px 7px;
+    }
+}
+
+/* NOTE    intro   ++++++++++ */
+.intro{
+    height:760px;
+    position: relative;
+}
+.intro::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/camping-min.jpg");
+    background-position: 0px 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+}
+.intro .container{
+    height: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.intro h4{
+    font: 20px var(--hFont);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 7px;
+}
+.intro .container .text-img{
+    height: 105px;
+    width: 358px;
+    margin-top: 15px;
+}
+.intro .container .text-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.intro h1{
+    font: 5rem var(--hFont);
+    font-weight: 700;
+    margin-top: 20px;
+    word-spacing: 30px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+.intro h3{
+    font: 1rem "Roboto", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-top: 45px;
+}
+.intro a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border:2px solid white;
+    letter-spacing: 2px;
+    font: 1.125rem var(--pFont);
+    font-weight: 700;
+    margin: 64px auto 60px;
+    padding: 20px 55px 21px 54px;
+    border-radius:40px;
+    transition: 0.5s ease;
+
+    &:hover{
+        color: black;
+        background-color: white;
+    }
+}
+
+/* NOTE    tripcards   ++++++++++ */
+.tripcards .container{
+    max-width: 1170px;
+    height: auto;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+.tripcards .card{
+    height: 100%;
+    width: 270px;
+    border: 5px solid #f58d54;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 40px;
+    position: relative;
+    bottom: 65px;
+    background-color: #333333;
+}
+.tripcards .svg{
+    height: 64px;
+    width: 64px;
+    background-color: #f58d54;
+    opacity: 0.3;
+}
+.tripcards h4{
+    font: 1.5rem var(--hFont);
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 18px 0 20px;
+    line-height: 1.1;
+}
+.tripcards p{
+    font: 1rem var(--pFont);
+    line-height:2;
+}
+/* NOTE   goodTrips   ++++++++++ */
+.goodTrips .container{
+    max-width: 1140px;
+    height: auto;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.goodTrips .container .left{
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;   
+}
+.goodTrips .left .eg-heading3{
+    font:3.125rem  var(--hFont);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #f58d54;
+    margin: 215px 0px 48px 15px;
+}
+.goodTrips .left .eg-para{
+    font:1.25rem var(--pFont);
+    font-weight: 300;
+    line-height: 2;
+    margin: 0px 20px 0px 15px;
+}
+.goodTrips .left a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+    letter-spacing: 1px;
+    font: 1.25rem var(--pFont);
+    font-weight:700;
+    margin: 46px auto 0 19px;
+    border-radius: 40px;
+    padding: 0px 0 0 14px;
+    height: 65px;
+    width: 236px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.goodTrips .container .right{
+    flex: 1 1 65%;
+    display: flex;
+    justify-content:end;
+    flex-direction: column;
+    position: relative;
+}
+.goodTrips .cricle1{
+    height: 202px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    border: 25px solid #F58D54;
+    z-index: -1;
+    top: 0%;
+    right: 0%;
+}
+.goodTrips .cricle2{
+    height: 106px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    border: 21px solid #F58D54;
+}
+.goodTrips .cricle3{
+    height: 555px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/452545.jpg");
+    background-size: cover;
+    margin: 0 0 77px 144px;
+}
+
+/* NOTE   backpakingTrips   ++++++++++ */
+.backpakingTrips .container{
+    max-width: 1140px;
+    height: 1140px;
+    margin:50px auto;
+    display: flex;
+    flex-direction: column;
+}
+.backpakingTrips .imgages{
+    flex: 1 1 900px;
+    position: relative;
+}
+.backpakingTrips .cricle1,
+.backpakingTrips .cricle2,
+.backpakingTrips .cricle3,
+.backpakingTrips .cricle4,
+.backpakingTrips .cricle5{
+    border-radius: 50%;
+    position: absolute;
+}
+.backpakingTrips .cricle1{
+    height: 276px;
+    aspect-ratio: 1;
+    top: 10%;
+    left: 5%;
+    background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/photo-1418065460487-3e41a6c84dc5.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+.backpakingTrips .cricle2{
+    height: 628px;
+    aspect-ratio: 1;
+    top: 6%;
+    right: 20%;
+    background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/photo-1504870712357-65ea720d6078.jpg");
+    background-size: cover;
+    border: 12px solid white;
+}
+.backpakingTrips .cricle3{
+    height: 119px;
+    aspect-ratio: 1;
+    bottom: 42%;
+    left: 1%;
+    border: 20px solid #F58D54;
+}
+.backpakingTrips .cricle4{
+    height: 385px;
+    aspect-ratio: 1;
+    left: 13%;
+    bottom: 7%;
+    background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/photo-1483197452165-7abc4b248905.jpg");
+    background-position: 0 50%;
+    background-size: cover;
+    border: 20px solid #F58D54;
+}
+.backpakingTrips .cricle5{
+    height: 250px;
+    aspect-ratio: 1;
+    right: 7%;
+    bottom: 8%;
+    border: 48px solid #4D4D4D;
+}
+.backpakingTrips .text{
+    text-align: center;
+}
+.backpakingTrips .text .eg-heading2{
+    font: 3.75rem var(--hFont);
+    margin:0 auto 20px;
+}
+.backpakingTrips .text .eg-para1{
+    font: 1.25rem  var(--pFont);
+    line-height: 2;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 42px 20px;
+}
+.backpakingTrips .text .eg-para2{
+    font: 1rem var(--pFont);
+    margin: 15px 0 50px;
+}
+.backpakingTrips .text a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border:2px solid white;
+    font: 1.125rem var(--pFont);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 70px auto 60px;
+    padding: 20px 55px 21px 54px;
+    border-radius:40px;
+    transition: 0.5s ease;
+
+    &:hover{
+        color: black;
+        background-color: white;
+    }
+}
+
+/* NOTE  groupTrips   ++++++++++ */
+.groupTravel .container{
+    max-width: 1140px;
+    height: auto;
+    margin: 105px auto;
+}
+.groupTravel .eg-row1 .eg-heading2{
+    font: 3.75rem var(--hFont);
+    margin: 0 490px 62px 0;
+    line-height: 1.1;
+}
+.groupTravel .eg-row2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.groupTravel .eg-row2 .eg-card{
+    height: 580px;
+    width: 409px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    margin: 0 0 0 95px;
+    padding:80px 48px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.groupTravel .eg-row2 .eg-para{
+    font: 1rem var(--pFont);
+    line-height: 2;
+    margin: 0 0 20px;
+}
+.groupTravel .eg-card a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #F58D54;
+        border:2px solid #F58D54;
+        letter-spacing: 2px;
+        font: 1.125rem var(--pFont);
+        font-weight: 700;
+        margin: 30px auto 60px 0;
+        padding: 20px 40px 21px 40px;
+        border-radius:40px;
+        transition: 0.5s ease;
+    
+        &:hover{
+            color: white;
+            background-color: #F58D54;
+        }
+}
+.groupTravel .eg-row2 .cricleImg{
+    height: 422px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/rr.jpg");
+    background-size: cover;
+    margin: 52px 0 0 55px;
+}
+
+/* NOTE   adventureTours   ++++++++++ */
+.adventureTours .container{
+    max-width: 1140px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.adventureTours .eg-heading2{
+    font: 3.75rem var(--hFont);
+    text-align: center;
+    margin: 57px 100px 0;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.adventureTours .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.adventureTours .card{
+    height: 518px;
+    width: 324px;
+    background-color: white;
+    border-radius: 30px;
+    color: black;
+}
+.adventureTours .img{
+    height: 147px;
+    width: 147px;
+    border-radius: 50%;
+    background-color: wheat;
+    margin: 29px 0 38px 24px;
+}
+.adventureTours .img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-position: 50% 50%;
+}
+.adventureTours .eg-heading4{
+    font: 1.25rem var(--hFont);
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 28px 24px;
+}
+.adventureTours .eg-para{
+    font: 1.25rem var(--pFont);
+    line-height: 2;
+    color: #979797;
+    margin: 0 55px 25px 26px;
+}
+.adventureTours a{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid black;
+    font: 1rem var(--pFont);
+    letter-spacing: 2px;
+    margin: 0 0 0 27px;
+
+    &:hover{
+        border-color: #F58D54;
+    }
+}
+
+/* NOTE   adventureStarts   ++++++++++ */
+.adventureStarts .container{
+    max-width: 1140px;
+    height: auto;
+    margin: 0 auto;
+}
+.adventureStarts .row1,
+.adventureStarts .row2{
+    display: flex;
+    flex-wrap:wrap;
+}
+.adventureStarts .row1 .img{
+    height: 650px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    top: 201px;
+    left: 5%;
+    background-image: url('https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/345346.jpg');
+    background-size: cover;
+}
+.adventureStarts .row1 .cricle{
+    height: 246px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    top:201px;
+    left:6%;
+    border: 50px solid #4D4D4D;
+}
+.adventureStarts .row2 .cricle{
+    height: 168px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #F58D54;
+    position: relative;
+    top: 51px;
+    left: 2%;
+}
+.adventureStarts .row2 .text{
+    width: 613px;
+    height: 524px;
+    color: black;
+    background-color:white;
+    border-radius: 30px;
+    position: relative;
+    bottom: 38px;
+    left: 30%;
+}
+.adventureStarts .eg-heading2{
+    font: 3.75rem var(--hFont);
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 36px 0 28px 48px;
+}
+.adventureStarts .eg-para{
+    font: 1.25rem var(--pFont);
+    line-height: 2;
+    font-weight: 400;
+    margin: 0 67px 0 48px;
+}
+.adventureStarts .anker{
+    height: 65px;
+    width: 227px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F58D54;
+    margin: 104px 0 0 45px;
+}
+.adventureStarts .anker a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font: 1.25rem var(--pFont);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* NOTE   member-profiles   ++++++++++ */
+.member-profiles .container{
+    max-width: 1140px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+    padding-top: 101px;
+}
+.member-profiles .cell1,
+.member-profiles .cell2,
+.member-profiles .cell3,
+.member-profiles .cell4,
+.member-profiles .cell5,
+.member-profiles .cell6{
+    width: 570px;
+    height: 261px;
+    padding: 0px 46px 0 64px;
+}
+.member-profiles .svg{
+    width: 33px;
+    height: 33px;
+    background-color: #F58D54;
+    opacity: 0.8;
+}
+.member-profiles .eg-para{
+    font: 1rem var(--pFont);
+    line-height: 2;
+    margin: 28px 0 16px 0;
+}
+.member-profiles .eg-heading4{
+    font: 1.25rem var(--hFont);
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* NOTE  nature-wildlife  ++++++++++ */
+.nature-wildlife{
+    height: 765px;
+    position: relative;
+    margin-top: 68px;
+}
+.nature-wildlife::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/man-with-rucksack-admires-gorgeous-mountain-555.jpg");
+    background-position: 0px 50%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+.nature-wildlife .container{
+    max-width: 1140px;
+    margin: auto;
+    padding: 167px 0 0 6px;
+}
+.nature-wildlife .content{
+    width: 420px;
+    height: 490px;
+    margin: 0 auto 0 0;
+    padding: 30px;
+}
+.nature-wildlife .eg-heading2{
+    font: 3.75rem var(--hFont);
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0 0 21px;
+}
+.nature-wildlife .eg-para{
+    font: 1.125rem var(--pFont);
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0 0 18px;
+}
+.nature-wildlife .icons{
+    display: flex;
+    gap: 16px;
+    font-size: 1.7rem;
+    margin: 0 0 0 8px;
+}
+
+/* NOTE contact ++++++++++ */
+.contact .container{
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+.contact .eg-heading2{
+    font: 3.75rem var(--hFont);
+    line-height: 1.1;
+    margin-top: 70px;
+    font-weight: 700;
+}
+.contact .name-email{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 72px;
+}
+.contact input{
+    width: 319px;
+    height: 50px;
+    background-color: #404040;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0 20px;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+.contact textarea{
+    max-width: 100%;
+    width: 100%;
+    height: 137px;
+    margin-top: 40px;
+    background-color: #404040;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-bottom: 1px solid white;
+}
+.contact .btn{
+    width:100%;
+    height: 70px;
+    margin-top: 36px;
+    border-radius: 40px;
+    border: none;
+    background-color: #f58d54;
+    text-transform: uppercase;
+    font: 1.125rem var(--hFont);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    transition: 0.4s ease;
+
+    &:hover {
+        color: black;
+        background-color: white;
+    }
+}
+
+.footer .eg-row1,
+.footer .eg-row2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    text-align: center;
+}
+.footer .eg-row1{
+    height: 150px;
+    background-color: #293233;
+    font: 0.875rem var(--pFont);
+}
+.footer .eg-row1 .eg-para{
+    font: 1.2rem var(--pFont);
+    line-height: 1.1;
+    max-width: 390px;
+    line-height: 1.5;
+}
+.footer .eg-row2{
+    height: 104px;
+    font: 1rem var(--pFont);
+}
+
+
+/* ++++++++++   Media Quairy   ++++++++++ */
+
+@media only screen and (max-width:480px){
+
+    .intro h4{
+        font-size: 5vw;
+    }
+    .intro .container .text-img{
+        width: 70vw;
+    }
+    .intro h1{
+        font-size: 10vw;
+    }
+    .intro h3{
+        max-width: 77vw;
+        text-align: center;
+    }
+    .tripcards .card{
+        width: 80vw;
+    }
+    .goodTrips .cricle1{
+        height: 35vw;
+        top: -17%;
+        right: 16%;
+        border-width:6vw;
+    }
+    .goodTrips .cricle2{
+        height: 14vw;
+        border-width: 2.4vw;
+        top: 8%;
+        left: 15%;
+    }
+    .backpakingTrips .cricle3{
+        height: 16vw;
+        border-width: 3vw;
+        bottom: 55%;
+        left: 7%;
+        z-index: 1;
+    }
+    .backpakingTrips .cricle4{
+        height: 54vw;
+        border-width: 3.5vw;
+        left: 4%;
+        bottom: 13%;
+    }
+    .backpakingTrips .cricle5{
+        height: 25vw;
+        border-width: 4.5vw;
+        right: 10%;
+        bottom: 35%;
+    }
+    .backpakingTrips .text .eg-heading2{
+        font-size: 10vw;
+        text-align: center;
+    }
+    .groupTravel .eg-row1 .eg-heading2{
+        margin: 0;
+        font-size: 10vw;
+        text-align: center;
+    }
+    .groupTravel .eg-card a{
+        padding: 5vw 4vw;
+    }
+    .groupTravel .eg-row2 .cricleImg{
+        height: 96vw;
+        margin: 55px 0 0 auto;
+    }
+    .adventureTours .eg-heading2{
+        font-size: 11vw;
+        margin:0;
+    }
+    .adventureStarts .row1 .img{
+        height: 98vw;
+        left: 0;
+        margin: auto;
+    }
+    .adventureStarts .row1 .cricle{
+        bottom: 40vh;
+    }
+    .adventureStarts .row2 .cricle{
+        height: 23vw;
+        top: auto;
+        bottom: 30px;
+        left: 5%;
+    }
+    .adventureStarts .row2 .text{
+        height: auto;
+        width: 92vw;
+        margin: auto;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 30px;
+    }
+    .adventureStarts .eg-heading2{
+        font-size: 10vw;
+        margin: 30px;
+    }
+    .member-profiles .cell1,
+    .member-profiles .cell2,
+    .member-profiles .cell3,
+    .member-profiles .cell4,
+    .member-profiles .cell5,
+    .member-profiles .cell6{
+        width: 100vw;
+        height: auto;
+        padding: 0px 40px 50px 40px;
+    }
+    .nature-wildlife .content{
+        width: 90vw;
+    }
+    .contact .eg-heading2{
+        font-size: 15vw;
+    }
+    .contact input{
+        width: 90vw;
+    }
+}
+@media only screen and (min-width:481px) and (max-width:768px){
+
+    .intro h4{
+        font-size: 4vw;
+    }
+    .intro .container .text-img{
+        width: 40vw;
+    }
+    .intro h1{
+        font-size: 8vw;
+    }
+    .intro h3{
+        max-width: 60vw;
+        text-align: center;
+    }
+    .goodTrips .cricle1{
+        height: 35vw;
+        top: -17%;
+        right: 10%;
+        border-width:5vw;
+    }
+    .goodTrips .cricle2{
+        height: 14vw;
+        border-width: 2.4vw;
+        top: 22%;
+        left: 8%;
+    }
+    .backpakingTrips .cricle3{
+        height: 16vw;
+        border-width: 3vw;
+        bottom: 45%;
+        left: 0%;
+        z-index: 1;
+    }
+    .backpakingTrips .cricle4{
+        height: 54vw;
+        border-width: 3.5vw;
+        left: 4%;
+        bottom: 0%;
+    }
+    .backpakingTrips .cricle5{
+        height: 25vw;
+        border-width: 4.5vw;
+        right: 10%;
+        bottom: 15%;
+    }
+   
+    .backpakingTrips .text .eg-heading2,
+    .groupTravel .eg-row1 .eg-heading2{
+        margin: 20px auto;
+        font-size: 8vw;
+        text-align: center;
+    }
+    .groupTravel .eg-row2 .cricleImg{
+        height: 53vw;
+        margin: 55px 0 0 auto;
+    }
+    .adventureTours .eg-heading2{
+        font-size: 8vw;
+        margin:0 10vw;
+    }
+    .adventureStarts .row1 .img{
+        height: 70vw;
+        left: 0;
+        margin: auto;
+    }
+    .adventureStarts .row1 .cricle{
+        bottom: 50vw;
+    }
+    .adventureStarts .row2 .cricle{
+        height: 18vw;
+        top: auto;
+        bottom: 70px;
+        left: 2%;
+    }
+    .adventureStarts .row2 .text{
+        height: auto;
+        width: 60vw;
+        margin: auto;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 30px;
+    }
+    .adventureStarts .eg-heading2{
+        font-size: 7vw;
+        margin: 30px;
+    }
+    .member-profiles .cell1,
+    .member-profiles .cell2,
+    .member-profiles .cell3,
+    .member-profiles .cell4,
+    .member-profiles .cell5,
+    .member-profiles .cell6{
+        width: 85vw;
+        height: auto;
+        padding: 0px 40px 50px 40px;
+    }
+    .nature-wildlife .content{
+        width: 90vw;
+        padding-right: 200px;
+    }
+    .contact .eg-heading2{
+        font-size: 10vw;
+    }
+    .contact input{
+        width: 42vw;
+    }
+}
+@media only screen and (max-width:768px){
+    .header .eg-list{
+        display: none;
+    }
+    .intro .container .text-img{
+        height: 70px;
+    }
+    .intro h1{
+        word-spacing: 10px;
+        text-align: center;
+    }
+    .intro a{
+        padding: 4vw 5.4vw;
+    }
+    .goodTrips .container{
+        gap: 90px;
+    }
+    .goodTrips .cricle3{
+        width: 70vw;
+        height: 70vw;
+        margin: 0 auto;
+    }
+    .backpakingTrips .cricle1{
+        height: 47vw;
+    }
+    .backpakingTrips .cricle2{
+        height: 66vw;
+        top: 13%;
+        right: 10%;
+        border-width: 8px;
+    }
+    .groupTravel .eg-row2 .eg-card{
+        height: auto;
+        width: 95vw;
+        margin:60px auto 0;
+        padding: 25px;
+    }
+    .groupTravel .eg-card a{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 53vw;
+        padding: 3vw 4vw;
+        margin: 0 auto 0 0;
+    }
+    .adventureTours .card{
+        height: auto;
+        width: 91vw;
+        padding-bottom: 35px;
+        margin: auto;
+    }
+    .adventureStarts .row1 .cricle{
+        height: 30vw;
+        border-width: 24px;
+        margin: 0 0 0 60vw;
+        top: auto;
+    }
+    .adventureStarts .eg-para{
+        margin: 0 50px 0 35px;
+    }
+    .adventureStarts .anker{
+        width: 35vw;
+        margin: 40px 0 0 6vw;
+    }
+    .nature-wildlife::before{
+        background-position-x:43%;
+    }
+    .nature-wildlife .eg-heading2{
+        font-size: 10vw;
+        margin-right: 48px;
+    }
+    .contact .inputmessage{
+        width: 90vw;
+        margin: auto;
+    }
+    .member-profiles .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (min-width:769px) and (max-width:900px){
+
+    .tripcards .card{
+        width: 41vw;
+    }
+    .backpakingTrips .cricle1{
+        height: 45vw;
+    }
+    .backpakingTrips .cricle2{
+        height: 64vw;
+    }
+    .backpakingTrips .cricle4{
+        height: 52vw;
+    }
+    .backpakingTrips .cricle5{
+        height: 23vw;
+    }
+    .adventureTours .cards{
+        padding-left: 10vw;
+    }
+    .adventureStarts .row1 .img{
+        height: 70vw;
+        left: 0;
+        margin: auto;
+    }
+    .adventureStarts .row1 .cricle{
+        bottom: 70vw;
+    }
+    .adventureStarts .row2 .cricle{
+        height: 18vw;
+        top: auto;
+        bottom: 70px;
+        left: 2%;
+    }
+    .member-profiles .cell1,
+    .member-profiles .cell2,
+    .member-profiles .cell3,
+    .member-profiles .cell4,
+    .member-profiles .cell5,
+    .member-profiles .cell6{
+        width: 85vw;
+        height: auto;
+        padding: 0px 65px 50px 90px;
+    }
+    .contact .eg-heading2{
+        font-size: 10vw;
+    }
+    .contact input{
+        width: 42vw;
+    }
+    .contact .inputmessage{
+        width: 90vw;
+        margin: auto;
+    }
+    .member-profiles .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (min-width:901px) and (max-width:1170px){
+
+    .tripcards .card{
+        width: 23vw;
+        padding: 30px;
+    }
+    .backpakingTrips .container{
+        height: auto;
+    }
+    .backpakingTrips .cricle1{
+        height: 40vw;
+    }
+    .backpakingTrips .cricle2{
+        height: 60vw;
+    }
+    .backpakingTrips .cricle4{
+        height: 45vw;
+    }
+    .backpakingTrips .cricle5{
+        height: 20vw;
+    }
+    .adventureTours .card{
+        width: 30vw;
+    }
+    .adventureStarts .row1 .img{
+        height: 65vw;
+        left: 0;
+        margin: auto;
+    }
+    .adventureStarts .row2 .cricle{
+        height: 15vw;
+        top: auto;
+        bottom: 90px;
+        left: 4%;
+    }
+    .member-profiles .cell1,
+    .member-profiles .cell2,
+    .member-profiles .cell3,
+    .member-profiles .cell4,
+    .member-profiles .cell5,
+    .member-profiles .cell6{
+        width: 48vw;
+        height: auto;
+        padding: 0px 65px 50px 90px;
+    }
+    .contact .eg-heading2{
+        font-size: 8vw;
+    }
+    .contact input{
+        width: 42vw;
+    }
+    .contact .inputmessage{
+        width: 90vw;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:1170px){
+
+    .intro::before{
+        background-position-x: 25%;
+    }
+    .intro .container .text-img{
+        width: 40vw;
+        height: auto;
+    }
+    .intro h1{
+        font-size: 10vw;
+        word-spacing: 10px;
+        text-align: center;
+    }
+    .intro h3{
+        max-width: 60vw;
+        font-size: 3vw;
+        text-align: center;
+    }
+    .intro a{
+        padding: 3vw 5.4vw;
+    }
+    .goodTrips .cricle1{
+        height: 20vw;
+        top: 29%;
+        right: 12%;
+        border-width:3vw;
+    }
+    .goodTrips .cricle2{
+        height: 14vw;
+        border-width: 2.4vw;
+        top: 50%;
+        left: 8%;
+    }
+    .goodTrips .cricle3{
+        width: 42vw;
+        height: 42vw;
+        margin: 0 auto;
+    }
+    .backpakingTrips .cricle2{
+        height: 60vw;
+        top: 13%;
+        right: 10%;
+        border-width: 8px;
+    }
+    .backpakingTrips .cricle3{
+        height: 14vw;
+        border-width: 3vw;
+        bottom: 45%;
+        left: 0%;
+        z-index: 1;
+    }
+    .backpakingTrips .cricle3{
+        height: 14vw;
+        border-width: 3vw;
+        bottom: 45%;
+        left: 0%;
+        z-index: 1;
+    }
+    .backpakingTrips .cricle4{
+        height: 45vw;
+        border-width: 2.5vw;
+        left: 4%;
+        bottom: 0%;
+    }
+    .backpakingTrips .cricle5{
+        border-width: 4.5vw;
+        right: 10%;
+        bottom: 15%;
+    }
+    .backpakingTrips .text .eg-heading2,
+    .groupTravel .eg-row1 .eg-heading2{
+        margin: 20px auto;
+        font-size: 8vw;
+        text-align: center;
+    }
+    .groupTravel .eg-row2 .eg-card{
+        height: auto;
+        width: 42vw;
+        margin:60px auto 0;
+        padding: 25px;
+    }
+    .groupTravel .eg-card a{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 53vw;
+        padding: 3vw 4vw;
+        margin: 0 auto 0 0;
+    }
+    .groupTravel .eg-row2 .cricleImg{
+        height: 48vw;
+        margin: 55px 0 0 auto;
+    }
+    .adventureStarts .row1 .cricle{
+        height: 25vw;
+        border-width: 45px;
+        margin: 0 0 0 60vw;
+        top: auto;
+        bottom: 45vw;
+    }
+    .adventureStarts .row2 .text{
+        height: auto;
+        width: 60vw;
+        margin: auto;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 30px;
+    }
+    .adventureStarts .eg-heading2{
+        font-size: 7vw;
+        margin: 30px;
+    }
+    .adventureStarts .eg-para{
+        margin: 0 50px 0 35px;
+    }
+    .adventureStarts .anker{
+        width: 35vw;
+        margin: 40px 0 0 6vw;
+    }
+    .member-profiles .eg-para{
+        font-size: 1.35rem;
+    }
+    .nature-wildlife::before{
+        background-position-x:43%;
+    }
+    .nature-wildlife .content{
+        width: 90vw;
+        padding-right: 200px;
+    }
+    .nature-wildlife .eg-heading2{
+        font-size: 10vw;
+        margin-right: 48px;
+    }
+    .contact .container{
+        max-width: none;
+    }
+}
+@media (max-width: 900px) {
+    .navBar{
+        padding-right: 30px;
+    }
+    .menuIcon{
+        display: block;
+    }
+    .navLinks{
+        display: none;
+    }
+}
+@media (min-width: 901px) {
+    .menuIcon {
+        display: none;
+    }
+    .navLinks{
+        display: block;
+    }
+}
